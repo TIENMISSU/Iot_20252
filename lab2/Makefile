@@ -1,6 +1,6 @@
 all: compile run display
 compile:
-	iverilog adder.v
+	iverilog -D DATA_WIDTH=8 adder.v
 run:
 	./a.out
 display:

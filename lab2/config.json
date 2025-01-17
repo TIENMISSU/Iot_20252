@@ -1,0 +1,10 @@
+{
+    "DESIGN_NAME": "adder",
+    "VERILOG_FILES": "dir::adder.v",
+    "//CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 40,
+    "VERILOG_DEFINES": ["DATA_WIDTH=16"],
+    "PL_WIRE_LENGTH_COEF": 0.05,
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 200 200"
+}

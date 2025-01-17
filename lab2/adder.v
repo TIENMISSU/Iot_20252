@@ -1,16 +1,18 @@
 `timescale 1ns/10ps
 module adder
-	(input [3:0] A,
-	 input [3:0] B,
-	 output [4:0] C)
+	#(parameter DW = `DATA_WIDTH)
+	(input [DW-1:0] A,
+	 input [DW-1:0] B,
+	 output [2*DW+1:0] C)
 ;
 
-	assign C = A + B;
+	assign C = (A + B) * (A - B);
 endmodule
 
 module tb;
-	reg [3:0] a, b;
-	wire [4:0] c;
+	parameter DW = `DATA_WIDTH;
+	reg [DW-1:0] a, b;
+	wire [2*DW+1:0] c;
 	reg clk;
 
 	initial begin
