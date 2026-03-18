@@ -1,7 +1,0 @@
-all: compile run display
-compile:
-	iverilog adder.v
-run:
-	./a.out
-display:
-	gtkwave wave.vcd 
